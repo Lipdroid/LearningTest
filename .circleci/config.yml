@@ -4,8 +4,12 @@ jobs:
     machine: true
     steps:
       - checkout
-
+  bar:
+    machine: true
+    steps:
+      - checkout
 workflows:
   workflow:
     jobs:
       - foo
+      - bar
