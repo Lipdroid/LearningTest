@@ -42,5 +42,4 @@ jobs:
 workflow:
   test-deploy:
     jobs:
-      -build
       -publish
