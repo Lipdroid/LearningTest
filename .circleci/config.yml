@@ -1,17 +1,11 @@
 version: 2.1
 jobs:
-  publish:
-    working_directory: ~/code
-    docker:
-      - image: circleci/android:api-29
-    environment:
-      JVM_OPTS: -Xmx3200m
+  foo:
+    machine: true
     steps:
       - checkout
-      - run:
-          name: Run Tests
-          command: ./gradlew check
-workflow:
-  test-deploy:
+
+workflows:
+  workflow:
     jobs:
-      -publish
+      - foo
